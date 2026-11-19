@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d19">
+  <title>MEBRU AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="logo">M</div>
+      <div class="brand">
+        <h2>MEBRU AI</h2>
+        <span>Yapay Zekâ Asistanı</span>
+      </div>
+      <button id="newChatBtn" class="icon-btn" title="Yeni sohbet">＋</button>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-page="chat">Sohbet</button>
+      <button class="tab" data-page="learn">Bilgi Merkezi</button>
+    </nav>
+
+    <main id="chatPage" class="page">
+      <div id="chatArea" class="chat-area">
+        <div class="welcome">
+          <div class="big-logo">M</div>
+          <h1>MEBRU AI</h1>
+          <p>Merhaba! Sana nasıl yardımcı olabilirim?</p>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <textarea id="messageInput"
+          placeholder="MEBRU'ya bir şey sor..."
+          rows="1"></textarea>
+        <button id="voiceBtn" title="Sesli konuş">🎙</button>
+        <button id="sendBtn" title="Gönder">➤</button>
+      </div>
+      <p class="disclaimer">MEBRU AI hata yapabilir. Önemli bilgileri kontrol et.</p>
+    </main>
+
+    <main id="learnPage" class="page hidden">
+      <div class="learn-container">
+        <h2>Bilgi Merkezi</h2>
+        <p>MEBRU'nun sohbetlerde kullanmasını istediğin bilgileri buraya kaydet.</p>
+
+        <textarea id="knowledgeInput"
+          placeholder="Öğretmek istediğin bilgiyi yaz..."
+          rows="5"></textarea>
+
+        <button id="saveKnowledge" class="primary">
+          Bilgiyi Kaydet
+        </button>
+
+        <h3>Kaydedilen bilgiler</h3>
+        <div id="knowledgeList"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
